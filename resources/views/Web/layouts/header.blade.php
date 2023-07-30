@@ -11,9 +11,11 @@
                 <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
                 <li class="nav-item"><a href="car.html" class="nav-link">Cars</a></li>
                 <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                <a href="">
-                    <li class="nav-item"><a href="contact.html" class="nav-link">Login</a></li>
-                </a>
+                @if (auth()->user())
+                <li class="nav-item"><a href="{{ route('user.logout') }}" class="nav-link">LogOut</a></li>
+                @else
+                <li class="nav-item"><a href="{{ route('user.login') }}" class="nav-link">Login</a></li>
+                @endif
             </ul>
         </div>
     </div>
