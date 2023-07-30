@@ -1,8 +1,5 @@
 @extends('Backend.Layouts.master')
 @section('content')
-<div class="wrapper">
-    @include('Backend.Layouts.sidenav')
-<div class="content-wrapper">
 <div class="content-header">
     <div class="container-fluid">
         <div class="row mb-2">

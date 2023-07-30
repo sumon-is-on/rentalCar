@@ -4,8 +4,8 @@
         <title>Carbook</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link href="{{ asset('css/googleapis.css') }}" rel="stylesheet">
-        <link rel="stylesheet" href="{{ asset('css/iconicBootstrap.css') }}">
+        {{-- <link href="{{ asset('css/googleapis.css') }}" rel="stylesheet"> --}}
+        {{-- <link rel="stylesheet" href="{{ asset('css/iconicBootstrap.css') }}"> --}}
         <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
         <link rel="stylesheet" href="{{ asset('css/owlcarousel.css') }}">
         <link rel="stylesheet" href="{{ asset('css/themedefault.css') }}">
@@ -22,7 +22,7 @@
 
 	    @include('Web.layouts.header')
         @yield('content')
-        @include('Web.layouts.header')
+        @include('Web.layouts.footer')
 
         <script src="{{ asset('js/jquery.min.js') }}"></script>
         <script src="{{ asset('js/migrate.js') }}"></script>
