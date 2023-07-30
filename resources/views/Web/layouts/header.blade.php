@@ -9,9 +9,11 @@
                 <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-                <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
                 <li class="nav-item"><a href="car.html" class="nav-link">Cars</a></li>
                 <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                <a href="">
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Login</a></li>
+                </a>
             </ul>
         </div>
     </div>
