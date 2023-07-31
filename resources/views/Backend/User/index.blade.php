@@ -44,23 +44,23 @@
                 @foreach ($users as $key=>$user)
                 <tbody>
                     <tr class="">
-                    <td class="py-4 px-6">{{ $key+1 }}</td>
-                    <td class="py-4 px-6 uppercase">{{ $user->name }}</td>
-                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                    <td class="py-1 px-6">{{ $key+1 }}</td>
+                    <td class="py-1 px-6 uppercase">{{ $user->name }}</td>
+                    <td class="text-sm text-gray-900 font-light px-6 py-1 whitespace-nowrap">
                         <img class="max-w-full h-auto rounded-full" src="{{ url('/users/'.$user->image)}}" width="35px">
                     </td>
-                    <td class="py-4 px-6">{{ $user->email }}</td>
-                    <td class="py-4 px-6 uppercase">{{ $user->phone }}</td>
-                    <td class="py-4 px-6 uppercase">{{ $user->address }}</td>
-                    <td class="py-4 px-6">
+                    <td class="py-1 px-6">{{ $user->email }}</td>
+                    <td class="py-1 px-6 uppercase">{{ $user->phone }}</td>
+                    <td class="py-1 px-6 uppercase">{{ $user->address }}</td>
+                    <td class="py-1 px-6">
                         <div class="flex">
-                        <a href=""class="text-indigo-600 hover:text-indigo-900">
+                        <a href="{{ route('user.show',$user->id) }}"class="text-indigo-600 hover:text-indigo-900">
                             <svg class="h-5 w-5 fill-current text-indigo-700" viewBox="0 0 24 24" width="24" height="24">
                             <path fill="none" d="M0 0h24v24H0z"/>
                             <path d="M12 3c5.392 0 9.878 3.88 10.819 9-.94 5.12-5.427 9-10.819 9-5.392 0-9.878-3.88-10.819-9C2.121 6.88 6.608 3 12 3zm0 16a9.005 9.005 0 0 0 8.777-7 9.005 9.005 0 0 0-17.554 0A9.005 9.005 0 0 0 12 19zm0-2.5a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9zm0-2a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
                             </svg>
                         </a>
-                        <a href=""class="text-indigo-600 hover:text-indigo-900">
+                        <a href="{{ route('user.edit',$user->id) }}"class="text-indigo-600 hover:text-indigo-900">
                             <svg class="h-5 w-5 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
                             <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"/>
                             <path fill-rule="evenodd"d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"clip-rule="evenodd"/>

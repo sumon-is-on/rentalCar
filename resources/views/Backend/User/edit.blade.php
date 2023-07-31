@@ -11,7 +11,8 @@
     </div>
 </div>
 <div class="m-5 w-full">
-    <form action="{{ route('user.post') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('user.update',$user->id) }}" method="post" enctype="multipart/form-data">
+        @method('PUT')
         @csrf
         <div class=" flex">
             <div>
@@ -49,15 +50,9 @@
                </div>
             </div>
         </div>
-        <div class=" flex">
-            <div class=" mt-4">
-                <label for="password" class="block mb-2  font-medium text-gray-900 dark:text-white">Password</label>
-                <input type="password" name="password" id="password" aria-describedby="password-explanation" class="form-control" value="{{old('password',$user->address)}}">
-            </div>
-        </div>
         <div class="flex mt-5">
             <a href="{{ route('user.index') }}" type="button" class="btn btn-danger mr-3 text-black">cancel</a>
-            <button type="submit" class="btn btn-success text-black">Add</button>
+            <button type="submit" class="btn btn-success text-black">Update</button>
         </div>
     </form>
 </div>
