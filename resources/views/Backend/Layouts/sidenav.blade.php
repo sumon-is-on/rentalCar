@@ -9,7 +9,11 @@
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item menu-open">
-                    <a href="#" class="nav-link active"><p>Dashboard</p></a>
+                    <a href="" class="nav-link active"><p>Dashboard</p></a>
+                </li>
+                <li class="nav-item menu-open">
+                    <a href="{{ route('user.index') }}" class="nav-link"><p>User</p></a>
+                </li>
             </ul>
         </nav>
     </div>

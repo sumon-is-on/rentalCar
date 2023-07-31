@@ -10,13 +10,20 @@ use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable{
     use HasApiTokens, HasFactory, Notifiable;
+
     protected $guarded =[];
+
     protected $hidden = [
         'password',
         'remember_token',
     ];
+
     protected $casts = [
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function Roles(){
+        return $this->belongsTo(Role::class,'role_id','id');
+    }
 }
