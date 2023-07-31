@@ -19,7 +19,7 @@
                 <a href="{{ route('user.index') }}" class="ml-2">
                     <button class="btn btn-info" type="button" title="Refresh page">Refresh</button>
                 </a>
-                <a href="{{ route('user.index') }}" class="ml-2">
+                <a href="{{ route('user.create') }}" class="ml-2">
                     <button class="btn btn-info" type="button">Add User</button>
                 </a>
             </div>

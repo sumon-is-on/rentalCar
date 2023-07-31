@@ -15,4 +15,5 @@ Route::post('login-post',[AuthController::class,'loginPost'])->name('user.login.
 Route::get('logout',[AuthController::class,'logout'])->name('user.logout');
 #user
 Route::get('user-index',[UserController::class,'index'])->name('user.index');
-
+Route::get('user-create',[UserController::class,'create'])->name('user.create');
+Route::post('user-create',[UserController::class,'post'])->name('user.post');
