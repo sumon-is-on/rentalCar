@@ -78,7 +78,7 @@ class UserController extends Controller{
 
 
     public function edit($id){
-        $roles=Role::where('id','!=',1)->get();
+        $roles=Role::all();
         $user=User::find($id);
         return view('Backend.User.edit',compact('user','roles'));
     }
@@ -107,6 +107,19 @@ class UserController extends Controller{
             } catch (\Throwable $th) {
                 notify()->error($th->getMessage());
                 return redirect()->back();
+        }
+    }
+
+
+    public function delete($id){
+        $user=User::find($id);
+        if($user){
+            $user->delete();
+            notify()->success('user deleted successfully');
+            return to_route('user.index');
+        }else{
+            notify()->info('User invalid');
+            return to_route('user.index');
         }
     }
 

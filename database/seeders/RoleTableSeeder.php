@@ -18,5 +18,10 @@ class RoleTableSeeder extends Seeder{
             'details' => 'A customer does not have the access in the backend.',
             'status'=>1
         ]);
+        Role::create([
+            'name' => 'Driver',
+            'details' => 'A driver does not have the access in the backend.',
+            'status'=>1
+        ]);
     }
 }
