@@ -17,13 +17,12 @@
         <link rel="stylesheet" href="{{ asset('css/flaticon.css') }}">
         <link rel="stylesheet" href="{{ asset('css/icomoon.css') }}">
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        @notifyCss
     </head>
     <body>
-
 	    @include('Web.layouts.header')
         @yield('content')
         @include('Web.layouts.footer')
-
         <script src="{{ asset('js/jquery.min.js') }}"></script>
         <script src="{{ asset('js/migrate.js') }}"></script>
         <script src="{{ asset('js/pooper.js') }}"></script>
@@ -41,5 +40,7 @@
         <script src="{{ asset('js/googleapi.js') }}"></script>
         <script src="{{ asset('js/map.js') }}"></script>
         <script src="{{ asset('js/main.js') }}"></script>
+        @include('notify::components.notify')
+        @notifyJs
     </body>
 </html>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CarBook</title>
     <link rel="stylesheet" href="{{ asset('backend/css/admintale.css') }}">
+    @notifyCss
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -12,5 +13,7 @@
         @include('Backend.Layouts.sidenav')
     <div class="content-wrapper">
     @yield('content')
+    @include('notify::components.notify')
+    @notifyJs
 </body>
 </html>

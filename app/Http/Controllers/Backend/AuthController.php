@@ -21,19 +21,23 @@ class AuthController extends Controller{
             'password'=>'required'
         ]);
         if ($validation->fails()) {
+            notify()->error('Invalid credentials');
             return redirect()->back();
         }
         $credentials=$request->only('email','password');
         if(Auth::attempt($credentials)){
+            notify()->success('Logged in successfull');
             return redirect()->route('web.home');
         }
         else{
+            notify()->error('Invalid credentials');
             return redirect()->back();
         }
     }
 
     public function logout(){
         Auth::logout();
+        notify()->success('Logged out successfull');
         return redirect()->route('web.home');
     }
 }
