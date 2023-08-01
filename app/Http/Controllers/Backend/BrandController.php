@@ -86,7 +86,7 @@ class BrandController extends Controller{
                 'details'=>$request->input('details',$brand->details)
             ]);
             $brand->save();
-                notify()->success('Brand created successfully');
+                notify()->success('Brand updated successfully');
                 return to_route('brand.index');
         } catch (\Throwable $th) {
                 notify()->error($th->getMessage());

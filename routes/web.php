@@ -39,4 +39,9 @@ Route::get('brand-delete/{id}',[BrandController::class,'delete'])->name('brand.d
 Route::get('car-index',[CarController::class,'index'])->name('car.index');
 Route::get('car-create',[CarController::class,'create'])->name('car.create');
 Route::post('car-store',[CarController::class,'store'])->name('car.store');
+Route::get('car-show/{id}',[CarController::class,'show'])->name('car.show');
+Route::get('car-edit/{id}',[CarController::class,'edit'])->name('car.edit');
+Route::put('car-update/{id}',[CarController::class,'update'])->name('car.update');
+Route::get('car-delete/{id}',[CarController::class,'delete'])->name('car.delete');
+
 

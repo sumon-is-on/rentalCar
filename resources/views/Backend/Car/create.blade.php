@@ -11,7 +11,7 @@
     </div>
 </div>
 <div class="m-5 w-full">
-    <form action="" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('car.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class=" flex">
             <div>
@@ -35,7 +35,7 @@
                 </div>
                 <div class=" mt-4">
                     <label for="number" class="block mb-2  font-medium text-gray-900 dark:text-white">Number:</label>
-                    <input type="text" number="number" id="number" class="form-control" placeholder="Car number" value="{{old('number',$car->number)}}" required>
+                    <input type="text" name="number" id="number" class="form-control" placeholder="Car number" value="{{old('number',$car->number)}}" required>
                 </div>
             </div>
             <div class=" ml-5">
