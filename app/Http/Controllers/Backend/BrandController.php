@@ -29,7 +29,6 @@ class BrandController extends Controller{
     }
 
 
-
     public function store(Request $request){
         $validation = Validator::make($request->all(),[
             'name'=>'required|unique:brands,name',

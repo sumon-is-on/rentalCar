@@ -3,6 +3,7 @@
 use App\Http\Controllers\Backend\AuthController;
 use App\Http\Controllers\Backend\BrandController;
 use App\Http\Controllers\Backend\CarController;
+use App\Http\Controllers\Backend\ServiceController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -43,5 +44,13 @@ Route::get('car-show/{id}',[CarController::class,'show'])->name('car.show');
 Route::get('car-edit/{id}',[CarController::class,'edit'])->name('car.edit');
 Route::put('car-update/{id}',[CarController::class,'update'])->name('car.update');
 Route::get('car-delete/{id}',[CarController::class,'delete'])->name('car.delete');
+
+#Service
+Route::get('service-idex',[ServiceController::class,'index'])->name('service.index');
+Route::get('service-create',[ServiceController::class,'create'])->name('service.create');
+Route::post('service-store',[ServiceController::class,'store'])->name('service.store');
+Route::get('service-edit/{id}',[ServiceController::class,'edit'])->name('service.edit');
+Route::put('service-update/{id}',[ServiceController::class,'update'])->name('service.update');
+Route::get('service-delete/{id}',[ServiceController::class,'delete'])->name('service.delete');
 
 

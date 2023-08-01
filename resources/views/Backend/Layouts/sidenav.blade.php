@@ -20,6 +20,9 @@
                 <li class="nav-item menu-open">
                     <a href="{{ route('car.index') }}" class="nav-link"><p>Cars</p></a>
                 </li>
+                <li class="nav-item menu-open">
+                    <a href="{{ route('service.index') }}" class="nav-link"><p>Services</p></a>
+                </li>
             </ul>
         </nav>
     </div>
