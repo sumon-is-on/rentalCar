@@ -9,9 +9,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 
 class UserController extends Controller{
+
+    
     public function index(Request $request){
-
-
         $search=request()->query('search');
         if($search){
             $users=User::where('name','like',"%$search%")

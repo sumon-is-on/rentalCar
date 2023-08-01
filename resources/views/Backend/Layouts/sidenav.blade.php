@@ -14,6 +14,9 @@
                 <li class="nav-item menu-open">
                     <a href="{{ route('user.index') }}" class="nav-link"><p>User</p></a>
                 </li>
+                <li class="nav-item menu-open">
+                    <a href="{{ route('brand.index') }}" class="nav-link"><p>Brand</p></a>
+                </li>
             </ul>
         </nav>
     </div>
