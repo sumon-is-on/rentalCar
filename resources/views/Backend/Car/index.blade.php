@@ -19,7 +19,7 @@
                 <a href="{{ route('car.index') }}" class="ml-2">
                     <button class="btn btn-info" type="button" title="Refresh page">Refresh</button>
                 </a>
-                <a href="" class="ml-2">
+                <a href="{{ route('car.create') }}" class="ml-2">
                     <button class="btn btn-info" type="button">Add Car</button>
                 </a>
             </div>
@@ -35,6 +35,7 @@
                     <th scope="col" class="py-3 px-6">Sl</th>
                     <th scope="col" class="py-3 px-6">Name</th>
                     <th scope="col" class="py-3 px-6">Image</th>
+                    <th scope="col" class="py-3 px-6">Number</th>
                     <th scope="col" class="py-3 px-6">Brand</th>
                     <th scope="col" class="py-3 px-6">Model</th>
                     <th scope="col" class="py-3 px-6">Details</th>
@@ -49,6 +50,7 @@
                     <td class="text-sm text-gray-900 font-light px-6 py-1 whitespace-nowrap">
                         <img class="max-w-full h-auto rounded-full" src="{{ url('/cars/'.$data->image)}}" width="35px">
                     </td>
+                    <td class="py-1 px-6 uppercase">{{ $data->number }}</td>
                     <td class="py-1 px-6 uppercase">{{ $data->Brands->name }}</td>
                     <td class="py-1 px-6 uppercase">{{ $data->model }}</td>
                     <td class="py-1 px-6 uppercase">{{ $data->details }}</td>

@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('model')->nullable();
             $table->string('seat')->nullable();
             $table->string('image')->nullable();
+            $table->string('number')->unique();
             $table->string('details')->nullable();
             $table->string('status')->default(1);
             $table->timestamps();
