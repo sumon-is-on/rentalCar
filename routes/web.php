@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Backend\AuthController;
 use App\Http\Controllers\Backend\BrandController;
+use App\Http\Controllers\Backend\CarController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -33,4 +34,7 @@ Route::get('brand-show/{id}',[BrandController::class,'show'])->name('brand.show'
 Route::get('brand-edit/{id}',[BrandController::class,'edit'])->name('brand.edit');
 Route::put('brand-update/{id}',[BrandController::class,'update'])->name('brand.update');
 Route::get('brand-delete/{id}',[BrandController::class,'delete'])->name('brand.delete');
+
+#car
+Route::get('car-index',[CarController::class,'index'])->name('car.index');
 

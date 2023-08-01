@@ -12,10 +12,13 @@
                     <a href="" class="nav-link active"><p>Dashboard</p></a>
                 </li>
                 <li class="nav-item menu-open">
-                    <a href="{{ route('user.index') }}" class="nav-link"><p>User</p></a>
+                    <a href="{{ route('user.index') }}" class="nav-link"><p>Users</p></a>
                 </li>
                 <li class="nav-item menu-open">
-                    <a href="{{ route('brand.index') }}" class="nav-link"><p>Brand</p></a>
+                    <a href="{{ route('brand.index') }}" class="nav-link"><p>Brands</p></a>
+                </li>
+                <li class="nav-item menu-open">
+                    <a href="{{ route('car.index') }}" class="nav-link"><p>Cars</p></a>
                 </li>
             </ul>
         </nav>
