@@ -21,6 +21,10 @@
                     <input type="text" name="name" id="name" class="form-control" placeholder="Service name" value="{{old('name',$service->name)}}" required>
                 </div>
                 <div class=" mt-4">
+                    <label for="image" class="block mb-2  font-medium text-gray-900 dark:text-white">Image</label>
+                    <input type="file" name="image" id="image" aria-describedby="image-explanation" value="{{old('image',$service->image)}}">
+                </div>
+                <div class=" mt-4">
                     <label for="details" class="block mb-2  font-medium text-gray-900 dark:text-white">details:</label>
                     <input type="text" name="details" id="details" class="form-control" placeholder="Details.." value="{{old('details',$service->details)}}">
                 </div>

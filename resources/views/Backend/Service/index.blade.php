@@ -34,6 +34,7 @@
                     <tr>
                     <th scope="col" class="py-3 px-6">Sl</th>
                     <th scope="col" class="py-3 px-6">Name</th>
+                    <th scope="col" class="py-3 px-6">Image</th>
                     <th scope="col" class="py-3 px-6">Details</th>
                     <th scope="col" class="py-3 px-6">Action</th>
                     </tr>
@@ -43,6 +44,9 @@
                     <tr class="">
                     <td class="py-1 px-6">{{ $key+1 }}</td>
                     <td class="py-1 px-6 uppercase">{{ $data->name }}</td>
+                    <td class="text-sm text-gray-900 font-light px-6 py-1 whitespace-nowrap">
+                        <img class="max-w-full h-auto rounded-full" src="{{ url('/services/'.$data->image)}}" width="35px">
+                    </td>
                     <td class="py-1 px-6 uppercase">{{ $data->details }}</td>
                     <td class="py-1 px-6">
                         <div class="flex">

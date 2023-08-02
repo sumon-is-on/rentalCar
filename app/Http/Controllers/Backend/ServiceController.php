@@ -34,9 +34,16 @@ class ServiceController extends Controller{
             return redirect()->back();
         }
         try {
+            $filename=null;
+            if($request->hasFile('image')){
+                $image=$request->file('image');
+                $filename=date('Ymdhis').'.'.$image->getClientOriginalExtension();
+                $image->storeAs('/services',$filename);
+            }
             Service::create([
                 'name'=>$request->name,
                 'details'=>$request->details,
+                'image'=>$filename,
             ]);
             notify()->success('Service created successfully');
             return to_route('service.index');
@@ -56,9 +63,16 @@ class ServiceController extends Controller{
     public function update(Request $request,$id){
         $service = Service::find($id);
         try {
+            $filename=null;
+            if($request->hasFile('image')){
+                $image=$request->file('image');
+                $filename=date('Ymdhis').'.'.$image->getClientOriginalExtension();
+                $image->storeAs('/services',$filename);
+            }
             $service->update([
                 'name'=>$request->input('name',$service->name),
-                'details'=>$request->input('details',$service->details)
+                'details'=>$request->input('details',$service->details),
+                'image'=>$filename ?? $service->image,
             ]);
             $service->save();
                 notify()->success('Service updated successfully');
