@@ -19,6 +19,7 @@
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
         @notifyCss
     </head>
+
     <body>
 	    @include('Web.layouts.header')
         @yield('content')

@@ -53,6 +53,7 @@ class CarController extends Controller{
                 'model'=>$request->model,
                 'seat'=>$request->seat,
                 'number'=>$request->number,
+                'price'=>$request->price,
                 'image'=>$filename,
                 'details'=>$request->details,
             ]);
@@ -85,7 +86,7 @@ class CarController extends Controller{
             if($request->hasFile('image')){
                 $image=$request->file('image');
                 $filename=date('Ymdhis').'.'.$image->getClientOriginalExtension();
-                $image->storeAs('/users',$filename);
+                $image->storeAs('/cars',$filename);
             }
             $car->update([
                 'name'=>$request->input('name',$car->name),
@@ -94,6 +95,7 @@ class CarController extends Controller{
                 'model'=>$request->input('model',$car->model),
                 'seat'=>$request->input('seat',$car->seat),
                 'number'=>$request->input('number',$car->number),
+                'price'=>$request->input('price',$car->price),
                 'details'=>$request->input('details',$car->details)
             ]);
             $car->save();

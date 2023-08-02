@@ -36,6 +36,7 @@
                     <th scope="col" class="py-3 px-6">Name</th>
                     <th scope="col" class="py-3 px-6">Image</th>
                     <th scope="col" class="py-3 px-6">Number</th>
+                    <th scope="col" class="py-3 px-6">Price</th>
                     <th scope="col" class="py-3 px-6">Brand</th>
                     <th scope="col" class="py-3 px-6">Model</th>
                     <th scope="col" class="py-3 px-6">Details</th>
@@ -51,6 +52,7 @@
                         <img class="max-w-full h-auto rounded-full" src="{{ url('/cars/'.$data->image)}}" width="35px">
                     </td>
                     <td class="py-1 px-6 uppercase">{{ $data->number }}</td>
+                    <td class="py-1 px-6 uppercase">{{ $data->price }}/-</td>
                     <td class="py-1 px-6 uppercase">{{ $data->Brands->name }}</td>
                     <td class="py-1 px-6 uppercase">{{ $data->model }}</td>
                     <td class="py-1 px-6 uppercase">{{ $data->details }}</td>

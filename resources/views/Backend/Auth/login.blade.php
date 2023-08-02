@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/style.css">
+    @notifyCss
 </head>
 <body>
     <section class="ftco-section">
@@ -29,24 +30,17 @@
                                 <p class="text-center">OR</p>
                             </div>
                             <div class="form-group">
-                                <a href="">
-                                    <button type="submit" class="form-control btn btn-success rounded submit px-3">Registration</button>
+                                <a href="{{ route('user.registration') }}">
+                                    <button type="button" class="form-control btn btn-success rounded submit px-3">Registration</button>
                                 </a>
                             </div>
-
-                            {{-- <div class="form-group d-md-flex">
-                                <div class="w-50">
-                                    <label class="checkbox-wrap checkbox-primary">Remember Me<input type="checkbox" checked><span class="checkmark"></span></label>
-                                </div>
-                                <div class="w-50 text-md-right">
-                                    <a href="#">Forgot Password</a>
-                                </div>
-                            </div> --}}
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    @include('notify::components.notify')
+    @notifyJs
 </body>
 </html>

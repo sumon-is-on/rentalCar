@@ -1,7 +1,7 @@
 @extends('Web.layouts.master')
 @section('content')
 
-<div class="hero-wrap ftco-degree-bg" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+<div class="hero-wrap ftco-degree-bg" style="background-image: url('/web/header.jpeg');" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text justify-content-start align-items-center justify-content-center">
@@ -20,8 +20,7 @@
         <div class="container">
             <div class="row no-gutters">
                 <div class="col-md-12	featured-top">
-                    <div class="row no-gutters">
-                        <div class="col-md-4 d-flex align-items-center">
+                        <div class="col-md-12 align-items-center">
                             <form action="#" class="request-form ftco-animate bg-primary">
                                 <h2>Make your trip</h2>
                                 <div class="form-group">
@@ -51,45 +50,6 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="col-md-8 d-flex align-items-center">
-                            <div class="services-wrap rounded-right w-100">
-                                <h3 class="heading-section mb-4">Better Way to Rent Your Perfect Cars</h3>
-                                <div class="row d-flex mb-4">
-                                    <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-                                        <div class="services w-100 text-center">
-                                            <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-route"></span></div>
-                                                <div class="text w-100">
-                                                    <h3 class="heading mb-2">Choose Your Pickup Location</h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-                                        <div class="services w-100 text-center">
-                                            <div class="icon d-flex align-items-center justify-content-center">
-                                                <span class="flaticon-handshake"></span>
-                                            </div>
-                                            <div class="text w-100">
-                                                <h3 class="heading mb-2">Select the Best Deal</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-                                        <div class="services w-100 text-center">
-                                            <div class="icon d-flex align-items-center justify-content-center">
-                                                <span class="flaticon-rent"></span>
-                                            </div>
-                                            <div class="text w-100">
-                                                <h3 class="heading mb-2">Reserve Your Rental Car</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p>
-                                    <a href="#" class="btn btn-primary py-3 px-4">Reserve Your Perfect Car</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -101,31 +61,36 @@
             <div class="row justify-content-center">
                 <div class="col-md-12 heading-section text-center ftco-animate mb-5">
                     <span class="subheading">What we offer</span>
-                        <h2 class="mb-2">Feeatured Vehicles</h2>
+                    <h2 class="mb-2">Featured Vehicles</h2>
                 </div>
-                </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="carousel-car owl-carousel">
-                                <div class="item">
-                                    <div class="car-wrap rounded ftco-animate">
-                                        <div class="img rounded d-flex align-items-end" style="background-image: url(images/car-1.jpg);">
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="carousel-car owl-carousel">
+                        @foreach ($cars as $car)
+                            <div class="item">
+                                <div class="car-wrap rounded ftco-animate">
+                                    <div class="img rounded d-flex align-items-end" style="background-image: url('{{ url('/cars/'.$car->image) }}');"></div>
+                                </div>
+                                <div class="text">
+                                    <h2 class="mb-0"><a href="#">{{ $car->name }}</a></h2>
+                                    <div class="d-flex mb-3">
+                                        <span class="cat">{{ $car->model }}</span>
+                                        <p class="price ml-auto">$500 <span>/day</span></p>
                                     </div>
-                                    <div class="text">
-                                        <h2 class="mb-0"><a href="#">Mercedes Grand Sedan</a></h2>
-                                        <div class="d-flex mb-3">
-                                            <span class="cat">Cheverolet</span>
-                                            <p class="price ml-auto">$500 <span>/day</span></p>
-                                        </div>
-                                        <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Book now</a> <a href="#" class="btn btn-secondary py-2 ml-1">Details</a></p>
-                                    </div>
+                                    <p class="d-flex mb-0 d-block">
+                                        <a href="#" class="btn btn-primary py-2 mr-1">Book now</a>
+                                        <a href="#" class="btn btn-secondary py-2 ml-1">Details</a>
+                                    </p>
                                 </div>
                             </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
+        </div>
     </section>
+
 
     <section class="ftco-section">
         <div class="container">
@@ -157,7 +122,7 @@
             <div class="row justify-content-end">
                 <div class="col-md-6 heading-section heading-section-white ftco-animate">
                     <h2 class="mb-3">Do You Want To Earn With Us? So Don't Be Late.</h2>
-                    <a href="#" class="btn btn-primary btn-lg">Become A Driver</a>
+                    <a href="{{ route('user.registration') }}" class="btn btn-primary btn-lg">Become A Driver</a>
                 </div>
             </div>
         </div>

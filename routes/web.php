@@ -17,6 +17,13 @@ Route::get('user-login',[AuthController::class,'login'])->name('user.login');
 Route::post('login-post',[AuthController::class,'loginPost'])->name('user.login.post');
 Route::get('logout',[AuthController::class,'logout'])->name('user.logout');
 
+#Registration
+Route::get('user-registration',[AuthController::class,'registration'])->name('user.registration');
+Route::post('user-registration',[AuthController::class,'registrationPost'])->name('user.registration.post');
+
+# User Profile
+Route::get('user-profile/{id}',[HomeController::class,'userProfile'])->name('web.user.profile');
+
 
 #user
 Route::get('user-index',[UserController::class,'index'])->name('user.index');
@@ -46,7 +53,7 @@ Route::put('car-update/{id}',[CarController::class,'update'])->name('car.update'
 Route::get('car-delete/{id}',[CarController::class,'delete'])->name('car.delete');
 
 #Service
-Route::get('service-idex',[ServiceController::class,'index'])->name('service.index');
+Route::get('service-index',[ServiceController::class,'index'])->name('service.index');
 Route::get('service-create',[ServiceController::class,'create'])->name('service.create');
 Route::post('service-store',[ServiceController::class,'store'])->name('service.store');
 Route::get('service-edit/{id}',[ServiceController::class,'edit'])->name('service.edit');

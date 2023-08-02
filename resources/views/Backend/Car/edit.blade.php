@@ -38,6 +38,10 @@
                     <label for="number" class="block mb-2  font-medium text-gray-900 dark:text-white">Number:</label>
                     <input type="text" number="number" id="number" class="form-control" placeholder="Car number" value="{{old('number',$car->number)}}" required>
                 </div>
+                <div class=" mt-4">
+                    <label for="price" class="block mb-2  font-medium text-gray-900 dark:text-white">Price per Day:</label>
+                    <input type="text" name="price" id="price" class="form-control" placeholder="Car price" value="{{old('price',$car->price)}}" required>
+                </div>
             </div>
             <div class=" ml-5">
                 <div class=" mt-4">
