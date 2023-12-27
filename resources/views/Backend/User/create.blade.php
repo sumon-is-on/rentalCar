@@ -14,7 +14,7 @@
     <form action="{{ route('user.post') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class=" flex">
-            <div>
+            <div style="width: 30%;">
                 <div>
                     <label for="name" class="block mb-2  font-medium text-gray-900 dark:text-white">Name:</label>
                     <input type="text" name="name" id="name" class="form-control" placeholder="Your name" value="{{old('name',$user->name)}}" required>
@@ -27,15 +27,27 @@
                     <label for="contact" class="block mb-2  font-medium text-gray-900 dark:text-white">Contact Number:</label>
                     <input type="text" name="phone" id="phone" class="form-control" placeholder="" value="{{old('contact',$user->phone)}}">
                 </div>
+                <div class=" mt-4">
+                    <label for="blood_group" class="block mb-2  font-medium text-gray-900 dark:text-white">Blood Group:</label>
+                    <input type="text" name="blood_group" id="blood_group" class="form-control" placeholder="" value="{{old('blood_group',$user->blood_group)}}">
+                </div>
+                <div class="mt-4 xl:w-96">
+                    <label for="gender" class="block mb-2 font-medium text-gray-900 dark:text-white">Select Gender</label>
+                    <select name="gender" id="gender" class="form-control">
+                        <option name="gender" value="male">Male</option>
+                        <option name="gender" value="female">Female</option>
+                    </select>
+                    @error('gender')<span class="text-red-600">{{$message}}</span>@enderror
+                </div>
             </div>
-            <div class=" ml-5">
+            <div style="width: 30%;" class=" ml-5">
                 <div>
                     <label for="address" class="block mb-2  font-medium text-gray-900 dark:text-white">Address:</label>
                     <input type="text" name="address" id="address" class="form-control" placeholder="Your address" value="{{old('address',$user->address)}}">
                 </div>
                 <div class=" mt-4">
                     <label for="image" class="block mb-2  font-medium text-gray-900 dark:text-white">Image</label>
-                    <input type="file" name="image" id="image" aria-describedby="image-explanation" value="{{old('image',$user->image)}}">
+                    <input type="file" class="form-control" name="image" id="image" aria-describedby="image-explanation" value="{{old('image',$user->image)}}">
                 </div>
                 <div class="mt-4 xl:w-96">
                     <label for="countries" class="block mb-2 font-medium text-gray-900 dark:text-white">Select Role</label>
@@ -46,7 +58,7 @@
                       @endforeach
                   </select>
                   @error('role_id')<span class="text-red-600">{{$message}}</span>@enderror
-               </div>
+                </div>
             </div>
         </div>
         <div class=" flex">

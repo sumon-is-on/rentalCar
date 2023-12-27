@@ -37,6 +37,8 @@
                     <th scope="col" class="py-3 px-6">Image</th>
                     <th scope="col" class="py-3 px-6">Email</th>
                     <th scope="col" class="py-3 px-6">Contact</th>
+                    <th scope="col" class="py-3 px-6">Blood Group</th>
+                    <th scope="col" class="py-3 px-6">Gender</th>
                     <th scope="col" class="py-3 px-6">Address</th>
                     <th scope="col" class="py-3 px-6">Action</th>
                     </tr>
@@ -51,6 +53,8 @@
                     </td>
                     <td class="py-1 px-6">{{ $user->email }}</td>
                     <td class="py-1 px-6 uppercase">{{ $user->phone }}</td>
+                    <td class="py-1 px-6 uppercase">{{ $user->blood_group }}</td>
+                    <td class="py-1 px-6 uppercase">{{ $user->gender }}</td>
                     <td class="py-1 px-6 uppercase">{{ $user->address }}</td>
                     <td class="py-1 px-6">
                         <div class="flex">

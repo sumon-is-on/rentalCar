@@ -12,8 +12,10 @@ return new class extends Migration{
             $table->foreignId('role_id')->constrained()->cascadeOnDelete();
             $table->string('email')->unique();
             $table->string('phone')->unique();
+            $table->string('blood_group')->nullable();
             $table->string('image')->nullable();
-            $table->string('address')->unique();
+            $table->string('gender')->nullable();
+            $table->string('address')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

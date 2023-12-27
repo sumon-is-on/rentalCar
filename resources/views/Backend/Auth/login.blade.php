@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="css/style.css">
     @notifyCss
 </head>
-<body>
+<body style="background-image: url('/web/ad1.jpeg'); background-size: cover;">
     <section class="ftco-section">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-7 col-lg-5">
                     <div class="login-wrap p-4 p-md-5">
-                        <h4 class="text-center mb-4">Login for CarBook</h4>
-                        <form action="{{ route('user.login.post') }}" method="POST" class="login-form">
+                        <h1 class="text-center mb-4" style="font-size: xx-large; font-weight: bold;">Please, Login !</h1>
+                        <form action="{{ route('admin.login.post') }}" method="POST" class="login-form">
                             @csrf
                             <div class="form-group">
                                 <input type="text" name="email" class="form-control rounded-left" placeholder="Email" required>
@@ -25,14 +25,6 @@
                             </div>
                             <div class="form-group">
                                 <button type="submit" class="form-control btn btn-primary rounded submit px-3">Login</button>
-                            </div>
-                            <div class="form-group">
-                                <p class="text-center">OR</p>
-                            </div>
-                            <div class="form-group">
-                                <a href="{{ route('user.registration') }}">
-                                    <button type="button" class="form-control btn btn-success rounded submit px-3">Registration</button>
-                                </a>
                             </div>
                         </form>
                     </div>

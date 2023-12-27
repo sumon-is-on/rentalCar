@@ -14,13 +14,13 @@ class RoleTableSeeder extends Seeder{
             'status'=>1
         ]);
         Role::create([
-            'name' => 'Customer',
-            'details' => 'A customer does not have the access in the backend.',
+            'name' => 'Patient',
+            'details' => 'A Patient can ask for blood.',
             'status'=>1
         ]);
         Role::create([
-            'name' => 'Driver',
-            'details' => 'A driver does not have the access in the backend.',
+            'name' => 'Donor',
+            'details' => 'A donor can donate blood.',
             'status'=>1
         ]);
     }

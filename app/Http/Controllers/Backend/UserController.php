@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Validator;
 
 class UserController extends Controller{
 
-    
+
     public function index(Request $request){
         $search=request()->query('search');
         if($search){
@@ -58,8 +58,10 @@ class UserController extends Controller{
                 'role_id'=>$request->role_id,
                 'image'=>$filename,
                 'email'=>$request->email,
+                'gender'=>$request->gender,
                 'password'=>bcrypt($request->password),
                 'phone'=>$request->phone,
+                'blood_group'=>$request->blood_group,
                 'address'=>$request->address
             ]);
             notify()->success('User created successfully');
@@ -98,7 +100,9 @@ class UserController extends Controller{
                 'role_id'=>$request->input('role_id',$user->role_id),
                 'image'=>$filename ?? $user->image,
                 'email'=>$request->input('email',$user->email),
+                'gender'=>$request->input('gender',$user->gender),
                 'phone'=>$request->input('phone',$user->phone),
+                'blood_group'=>$request->input('blood_group',$user->blood_group),
                 'address'=>$request->input('address',$user->address)
             ]);
             $user->save();
